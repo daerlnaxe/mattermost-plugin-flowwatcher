@@ -33,6 +33,7 @@ Alpha 01
   - [x] Stop flow
   - [x] Force flow (usefull when flow is activted)
   - [ ] Bind a command to force flow
+  - [ ] Automatize stop flow in case of error
 - [x] A cleaner for the channel (each user must leave and back to the channel, to avoir "deleted message")
   - [x] Don't clean if there is reaction (white_check_mark for the while)
   - [x] Can clean for others User
