@@ -14,6 +14,8 @@ Alpha 01
 <br>
 
 ## Todo
+- [ ] Donner un nom aux flux
+- [ ] Voir si on peut créer des formulaires, je pense que ça sera plus simple.
 - [ ] A Cleaner based on a word
 - [ ] Bind a command to force flow (enable/disable work)
 - [ ] Verify it works with json feed
