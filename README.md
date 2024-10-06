@@ -29,7 +29,7 @@ Alpha 01
 - [x] Flow Activation
   - [x] Filter if flow disabled
   - [x] Indicate status in ls
-  - [x] Active flow
+  - [x] Activate flow
   - [ ] Stop flow
 - [x] A cleaner for the channel (each user must leave and back to the channel, to avoir "deleted message")
   - [x] Don't clean if there is reaction (white_check_mark for the while)
