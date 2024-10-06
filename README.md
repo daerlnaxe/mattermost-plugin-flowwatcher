@@ -14,18 +14,20 @@ Alpha 01
 <br>
 
 ## Todo
-- [x] A cleaner for the channel
-  - [x] Don't clean if there is reaction
 - [ ] A Cleaner based on a word
-- [ ] Bind core to subs
 - [ ] Unsub
 - [ ] Verify it works with json feed
-- [ ] Make a system to avoid to refresh if not needed
 - [ ] Configuration
   - [ ] Debug
   - [ ] Set Sleeper
 - [ ] Auth Login for rss with authentification (later)
-- [ ]   Pass Cloud Flare verification (later)
+- [ ] Pass Cloud Flare verification (later)
+- [x] Make a system to avoid to refresh if not needed
+- [x] Bind core to subs
+- [x] A cleaner for the channel (each user must leave and back to the channel, to avoir "deleted message")
+  - [x] Don't clean if there is reaction
+  - [x] Can clean for others User
+
 
 <br>
 <br
