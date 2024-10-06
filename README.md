@@ -15,7 +15,7 @@ Alpha 01
 
 ## Todo
 - [ ] A Cleaner based on a word
-- [ ] Unsub
+- [ ] Bind a command to force flow (enable/disable work)
 - [ ] Verify it works with json feed
 - [ ] Configuration
   - [ ] Debug
@@ -26,14 +26,14 @@ Alpha 01
 - [ ] Pass Cloud Flare verification (later)
 - [x] Make a system to avoid to refresh if not needed
 - [x] Bind core to subs
+- [x] Unsub
 - [x] Flow Activation
   - [x] Filter if flow disabled
   - [x] Indicate status in ls
   - [x] Activate flow
   - [x] Stop flow
-  - [x] Force flow (useful when flow is activted)
-  - [ ] Bind a command to force flow
-  - [ ] Automatize stop flow in case of error
+  - [x] Force flow (useful when flow is activted)  
+  - [x] Automatize stop flow in case of error
 - [x] A cleaner for the channel (each user must leave and back to the channel, to avoir "deleted message")
   - [x] Don't clean if there is reaction (white_check_mark for the while)
   - [x] Can clean for others User
