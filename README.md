@@ -1,5 +1,9 @@
 # Presentation
-FlowWatcher use `gofeed` package
+FlowWatcher use `gofeed` package and allow to post on a `Mattermost` channela feed from RSS (wip)
+
+In theory it will support JSON also... in all cases, at the end it will support. I'm not sure for the while but i will see to handle another types of flux, like APIs.
+
+<br>
 
 ## Version
 Alpha 01
