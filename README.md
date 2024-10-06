@@ -31,7 +31,7 @@ Alpha 01
   - [x] Indicate status in ls
   - [x] Activate flow
   - [x] Stop flow
-  - [x] Force flow (usefull when flow is activted)
+  - [x] Force flow (useful when flow is activted)
   - [ ] Bind a command to force flow
   - [ ] Automatize stop flow in case of error
 - [x] A cleaner for the channel (each user must leave and back to the channel, to avoir "deleted message")
