@@ -18,7 +18,7 @@ import(
 
 // Plugin implements the interface expected by the Mattermost server to communicate between the server and plugin processes.
 // Named Test and used by ServeHTTP
-type RssWatcherPlugin struct {
+type FlowWatcherPlugin struct {
 	plugin.MattermostPlugin
 
 	// Need by the bot
@@ -32,7 +32,7 @@ type RssWatcherPlugin struct {
 }
 
 // ServeHTTP demonstrates a plugin that handles HTTP requests by greeting the world.
-func (p *RssWatcherPlugin) ServeHTTP(c *plugin.Context, w http.ResponseWriter, r *http.Request) {
+func (p *FlowWatcherPlugin) ServeHTTP(c *plugin.Context, w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Hello, world!")
 }
 
@@ -41,5 +41,5 @@ func (p *RssWatcherPlugin) ServeHTTP(c *plugin.Context, w http.ResponseWriter, r
 // This example demonstrates a plugin that handles HTTP requests which respond by greeting the
 // world.
 func main() {
-	plugin.ClientMain(&RssWatcherPlugin{})
+	plugin.ClientMain(&FlowWatcherPlugin{})
 }

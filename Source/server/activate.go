@@ -13,21 +13,21 @@ import (
 )
 
 const (
-	BOTNAME="rsswatcherbot"
-	BOT_DISPLAY_NAME = "RssWatcher Bot"
-	BOT_DESCRIPTION = "A bot account created by the RssWatcher plugin."
+	BOTNAME="FlowWatcherbot"
+	BOT_DISPLAY_NAME = "FlowWatcher Bot"
+	BOT_DESCRIPTION = "A bot account created by the FlowWatcher plugin."
 
 )
 
 // First when plugin start
 // Remember to use the plugin name
-func (p *RssWatcherPlugin) OnActivate() error{
+func (p *FlowWatcherPlugin) OnActivate() error{
 	/*
 	// Verifyng Bot exists
 	_, err := p.ensureBotExists()
 
 	if err != nil {
-		p.API.LogError("RssWatcher >> OnActivate >> Failed to find "+BOT_DISPLAY_NAME+" user", "err", err)
+		p.API.LogError("FlowWatcher >> OnActivate >> Failed to find "+BOT_DISPLAY_NAME+" user", "err", err)
 		return err
 	}
 
@@ -70,7 +70,7 @@ func (p *RssWatcherPlugin) OnActivate() error{
 
 // Verifying bot is ready
 // Remember to use the plugin name
-func (p *RssWatcherPlugin) ensureBotExists() (string, *model.AppError) {
+func (p *FlowWatcherPlugin) ensureBotExists() (string, *model.AppError) {
 	p.API.LogDebug("Ensuring " + BOT_DISPLAY_NAME + " exists")
 
 	// Trying to create the bot
@@ -81,16 +81,16 @@ func (p *RssWatcherPlugin) ensureBotExists() (string, *model.AppError) {
 
 	// Failed to create bot
 	if createErr != nil {
-		p.API.LogDebug("RssWatcher >> "+ BOT_DISPLAY_NAME + " not created. Attempting to find existing one...")
+		p.API.LogDebug("FlowWatcher >> "+ BOT_DISPLAY_NAME + " not created. Attempting to find existing one...")
 
-		p.API.LogError("RssWatcher >> "+createErr.Message);
+		p.API.LogError("FlowWatcher >> "+createErr.Message);
 
 		// Verifying user exists with the same name
 		userBot, err := p.API.GetUserByUsername(BOTNAME)
 
 		// No user with this name <-- On devrait mettre une erreur
 		if err != nil || userBot == nil {
-			p.API.LogError("RssWatcher >> No user with the name "+BOT_DISPLAY_NAME+": userBot", "err", err)
+			p.API.LogError("FlowWatcher >> No user with the name "+BOT_DISPLAY_NAME+": userBot", "err", err)
 			return "", err
 		}
 
@@ -99,11 +99,11 @@ func (p *RssWatcherPlugin) ensureBotExists() (string, *model.AppError) {
 
 
 		if err != nil {
-			p.API.LogError("RssWatcher >> Failed to find "+BOT_DISPLAY_NAME, "err", err)
+			p.API.LogError("FlowWatcher >> Failed to find "+BOT_DISPLAY_NAME, "err", err)
 			return "", err
 		}
 
-		p.API.LogDebug("RssWatcher >> Found " + BOT_DISPLAY_NAME)
+		p.API.LogDebug("FlowWatcher >> Found " + BOT_DISPLAY_NAME)
 
 	}else{
 		/*
@@ -111,7 +111,7 @@ func (p *RssWatcherPlugin) ensureBotExists() (string, *model.AppError) {
 			p.API.LogError("Failed to set profile image for bot", "err", err)
 		}*/
 
-		p.API.LogDebug("RssWatcher >> "+ BOT_DISPLAY_NAME + " created")
+		p.API.LogDebug("FlowWatcher >> "+ BOT_DISPLAY_NAME + " created")
 	}
 
 	p.botUserID = bot.UserId

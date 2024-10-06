@@ -3,7 +3,7 @@ package main
 
 
 // get the WakeUp Time for the core poster
-func (p *RssWatcherPlugin) getWakeUpTime() (uint, error) {
+func (p *FlowWatcherPlugin) getWakeUpTime() (uint, error) {
 	//config := p.getConfiguration()
 
 	var wakeUpTime uint = 15

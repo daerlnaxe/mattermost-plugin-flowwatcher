@@ -9,7 +9,7 @@ import(
 )
 
 
-const SUBSCRIPTIONS_KEY = "rsswatcher_subscriptions"
+const SUBSCRIPTIONS_KEY = "FlowWatcher_subscriptions"
 
 
 // Subscription Object
@@ -38,7 +38,7 @@ type Subscriptions struct {
 *
 * Note init a new subcribtions object if there is nothing stored
 */
-func (p *RssWatcherPlugin) getSubscriptions() (*Subscriptions, error) {
+func (p *FlowWatcherPlugin) getSubscriptions() (*Subscriptions, error) {
 	//
 	var subscriptions *Subscriptions
 
@@ -92,8 +92,8 @@ func getValue(currentSubscriptions *Subscriptions, key string) (*Subscription) {
 }
 
 
-// Subscribe process the /rssw subscribe <channel> <url>
-func (p *RssWatcherPlugin) subscribe(ctx context.Context, channelID string, url string) error {
+// Subscribe process the /flw subscribe <channel> <url>
+func (p *FlowWatcherPlugin) subscribe(ctx context.Context, channelID string, url string) error {
 
 	sub := &Subscription{
 		ChannelID: channelID,
@@ -157,7 +157,7 @@ func (p *RSSFeedPlugin) addSubscription(key string, sub *Subscription) error {
 /*
 *	
 */
-func (p *RssWatcherPlugin) storeSubscriptions(s *Subscriptions) error {
+func (p *FlowWatcherPlugin) storeSubscriptions(s *Subscriptions) error {
 	b, err := json.Marshal(s)
 	if err != nil {
 		p.API.LogError(err.Error())

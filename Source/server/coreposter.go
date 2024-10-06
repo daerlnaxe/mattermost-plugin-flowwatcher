@@ -17,7 +17,7 @@ const (
 	DEBUG = true
 )
 
-func (p *RssWatcherPlugin) initCorePoster() {
+func (p *FlowWatcherPlugin) initCorePoster() {
 	wakeUpTime, err := p.getWakeUpTime()
 	
 	if err != nil {
@@ -45,7 +45,7 @@ func (p *RssWatcherPlugin) initCorePoster() {
 
 
 
-func (p *RssWatcherPlugin) subscribtionManager()error{
+func (p *FlowWatcherPlugin) subscribtionManager()error{
 	// get the stored 'Subscription" map (or new)
 	currentSubscriptions, err := p.getSubscriptions()
 	if err != nil {
@@ -82,7 +82,7 @@ func (p *RssWatcherPlugin) subscribtionManager()error{
 
 /*
 // Will Parse RSS Content thanksfull
-func(p* RssWatcherPlugin) parseContent(subscribtion *Subscription) (error, FEED) {
+func(p* FlowWatcherPlugin) parseContent(subscribtion *Subscription) (error, FEED) {
 
 	if err != nil {
 		p.API.LogError(err.Error())
@@ -95,7 +95,7 @@ func(p* RssWatcherPlugin) parseContent(subscribtion *Subscription) (error, FEED)
 */
 
 // Loop on all Items and send them
-func (p *RssWatcherPlugin) sendItems(channelID string, items []*gofeed.Item) {
+func (p *FlowWatcherPlugin) sendItems(channelID string, items []*gofeed.Item) {
 	
 	// !!!! Rajouter un comparateur pour ne pas reposter les mêmes messages
 	converter := md.NewConverter("", true, nil)
@@ -208,7 +208,7 @@ func (p *RssWatcherPlugin) sendItems(channelID string, items []*gofeed.Item) {
 }
 
 
-func (p *RssWatcherPlugin) createBotPost(channelID string, message string, postType string) error {
+func (p *FlowWatcherPlugin) createBotPost(channelID string, message string, postType string) error {
 /*
 	mee :=`json:"attachments": [
         {

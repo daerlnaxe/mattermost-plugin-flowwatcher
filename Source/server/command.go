@@ -13,15 +13,15 @@ import (
 	"github.com/mattermost/mattermost/server/public/model"
 	"github.com/mattermost/mattermost/server/public/plugin"
 
-	//"github.com/mattermost/mattermost/server/public/RssWatcherPlugin"
+	//"github.com/mattermost/mattermost/server/public/FlowWatcherPlugin"
 //	"github.com/mattermost/mattermost/server/public/shared/mlog"
 	"strings"
 )
 
 
-// The help you see when you type /rssw {*}
-const COMMAND_HELP = `* |/rssw sub {url}| - Connect your Mattermost channel to a RSS feed.
-* |/rssw ls| - List RSS Subscribtions for this Mattermost.
+// The help you see when you type /flw {*}
+const COMMAND_HELP = `* |/flw sub {url}| - Connect your Mattermost channel to a RSS feed.
+* |/flw ls| - List RSS Subscribtions for this Mattermost.
 `
 
 const (
@@ -37,12 +37,12 @@ const (
 // API
 func getCommand() *model.Command {
 	return &model.Command{
-		// Slack command "/rssw"
-		Trigger:          "rssw",
-		DisplayName:      "RssWatcher",
-		Description:      "Allows user to subscribe to an RSS feed.",
+		// Slack command "/flw"
+		Trigger:          "flw",
+		DisplayName:      "FlowWatcher",
+		Description:      "Allows user to subscribe to a flow.",
 		AutoComplete:     true,
-		AutoCompleteDesc: "Available commands: ls, sub, rem, help",
+		AutoCompleteDesc: "Available commands: ls, sub, rem, help, clrchan, rempost",
 		AutoCompleteHint: "[command]",
 		AutocompleteData: getAutocompleteData(),
 		
@@ -52,7 +52,7 @@ func getCommand() *model.Command {
 
 // Will interact with user when he is using Slack commands
 // API
-func (p *RssWatcherPlugin) ExecuteCommand(_ *plugin.Context, args *model.CommandArgs) (*model.CommandResponse, *model.AppError) {
+func (p *FlowWatcherPlugin) ExecuteCommand(_ *plugin.Context, args *model.CommandArgs) (*model.CommandResponse, *model.AppError) {
 	// Split for command args
 	split := strings.Fields(args.Command)
 	
@@ -70,8 +70,8 @@ func (p *RssWatcherPlugin) ExecuteCommand(_ *plugin.Context, args *model.Command
 		parameters = split[2:]
 	}
 
-	// Doesn't concern RssWatcher => pass
-	if command != "/rssw" {
+	// Doesn't concern FlowWatcher => pass
+	if command != "/flw" {
 		return &model.CommandResponse{}, nil
 	}
 
@@ -150,7 +150,7 @@ func (p *RssWatcherPlugin) ExecuteCommand(_ *plugin.Context, args *model.Command
 
 	// Default
 	default:
-		text := "###### Mattermost RssWatcher Plugin - Slash Command Help\n" + strings.Replace(COMMAND_HELP, "|", "`", -1)
+		text := "###### Mattermost FlowWatcher Plugin - Slash Command Help\n" + strings.Replace(COMMAND_HELP, "|", "`", -1)
 		return getCommandResponse("ephemeral", text), nil
 	}
 
@@ -178,7 +178,7 @@ func getCommandResponse(responseType, text string) *model.CommandResponse {
 
 
 // Check if user has admin role
-func (p *RssWatcherPlugin) hasSysadminRole(userID string) (bool, error) {
+func (p *FlowWatcherPlugin) hasSysadminRole(userID string) (bool, error) {
 	user, appErr := p.API.GetUser(userID)
 	if appErr != nil {
 		return false, appErr
@@ -194,14 +194,14 @@ func (p *RssWatcherPlugin) hasSysadminRole(userID string) (bool, error) {
 	En plus de Help
 */
 func getAutocompleteData() *model.AutocompleteData {
-	rsswatcherbot := model.NewAutocompleteData("rssw", "[command]",
+	FlowWatcherbot := model.NewAutocompleteData("flw", "[command]",
 		"Available commands: help, sub, ls")
 		
-		sub := model.NewAutocompleteData("sub", "", "Add a RSS to watch")
-		rsswatcherbot.AddCommand(sub)
+		sub := model.NewAutocompleteData("sub", "", "Add a flow to watch")
+		FlowWatcherbot.AddCommand(sub)
 
-		ls := model.NewAutocompleteData("ls", "", "List Rss for the channel")
-		rsswatcherbot.AddCommand(ls)
+		ls := model.NewAutocompleteData("ls", "", "List flow for the channel")
+		FlowWatcherbot.AddCommand(ls)
 		/*
 	preview := model.NewAutocompleteData("preview", "[team-name]", "Preview the welcome message for the given team name")
 	preview.AddTextArgument("Team name to preview welcome message", "[team-name]", "")
@@ -219,6 +219,6 @@ func getAutocompleteData() *model.AutocompleteData {
 	deleteChannelWelcome := model.NewAutocompleteData("delete_channel_welcome", "", "Delete the welcome message for the channel")
 	welcomebot.AddCommand(deleteChannelWelcome)
 */
-	return rsswatcherbot
+	return FlowWatcherbot
 }
 //
