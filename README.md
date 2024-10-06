@@ -26,6 +26,11 @@ Alpha 01
 - [ ] Pass Cloud Flare verification (later)
 - [x] Make a system to avoid to refresh if not needed
 - [x] Bind core to subs
+- [x] Flow Activation
+  - [x] Filter if flow disabled
+  - [x] Indicate status in ls
+  - [x] Active flow
+  - [ ] Stop flow
 - [x] A cleaner for the channel (each user must leave and back to the channel, to avoir "deleted message")
   - [x] Don't clean if there is reaction (white_check_mark for the while)
   - [x] Can clean for others User
