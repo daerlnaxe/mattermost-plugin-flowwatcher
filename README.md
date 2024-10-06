@@ -14,7 +14,7 @@ Alpha 01
 <br>
 
 ## Todo
-- [ ] A cleaner for the channel
+- [x] A cleaner for the channel
 - [ ] A Cleaner based on a word
 - [ ] Bind core to subs
 - [ ] Unsub
