@@ -1,16 +1,19 @@
 ## Comparaison gofeed / norme jsonfeed
 
-|Variable|Gofeed|Balise|Requis|Type|Unique|Description|
+|Variable|Type|Gofeed|Balise|O|Description|Note|
 |-|-|-|-|-|-|-|
-|ID|Y|Y|Y|String|Y| Ideally, the id is the full URL of the resource described by the item, since URLs make great unique identifiers.|
+|ID|String|Y|Y|Y|Ideally, the id is the full URL of the resource described by the item, since URLs make great unique identifiers.|A Check|
+|URL|String|Y|Y|N|URL of the resource described by the item. It’s the permalink|
+|ExternalURL|String|Y|Y|N|external_url (very optional, string) is the URL of a page elsewhere. This is especially useful for linkblogs|Probablement Inutile pour flowwatcher|
+|Title|String|Y|Y|N|Titre|Peut être non présent avec les micro blogs|
+|ContentHTML|String|Y|Y| content_html and content_text are each optional strings — but one or both must be present.| |
+
+O: Obligatoire
 
 
-
-	URL           string  `json:"url,omitempty"`            // url (optional, string) is the URL of the resource described by the item. It’s the permalink
-	ExternalURL   string  `json:"external_url,omitempty"`   // external_url (very optional, string) is the URL of a page elsewhere. This is especially useful for linkblogs
-	Title         string  `json:"title,omitempty"`          // title (optional, string) is plain text. Microblog items in particular may omit titles.
-	ContentHTML   string  `json:"content_html,omitempty"`   // content_html and content_text are each optional strings — but one or both must be present. This is the HTML or plain text of the item. Important: the only place HTML is allowed in this format is in content_html. A Twitter-like service might use content_text, while a blog might use content_html. Use whichever makes sense for your resource. (It doesn’t even have to be the same for each item in a feed.)
-	ContentText   string  `json:"content_text,omitempty"`   // Same as above
+ 
+ 
+ ContentText   string  `json:"content_text,omitempty"`   // Same as above
 	Summary       string  `json:"summary,omitempty"`        // summary (optional, string) is a plain text sentence or two describing the item.
 	Image         string  `json:"image,omitempty"`          // image (optional, string) is the URL of the main image for the item. This image may also appear in the content_html
 	BannerImage   string  `json:"banner_image,omitempty"`   // banner_image (optional, string) is the URL of an image to use as a banner.
