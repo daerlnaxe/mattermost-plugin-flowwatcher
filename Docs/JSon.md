@@ -6,8 +6,8 @@
 |URL|string|Y|-|Y|N|URL of the resource described by the item. It’s the permalink|
 |ExternalURL|string|Y|-|Y|N|external_url (very optional, string) is the URL of a page elsewhere. This is especially useful for linkblogs|Probablement Inutile pour flowwatcher|
 |Title|string|Y|-|Y|N|Titre|Peut être non présent avec les micro blogs|
-|ContentHTML|string|Y|-|Y|1|content_html and content_text are each optional strings — but one or both must be present.| |
-|ContentText|string|Y|-|Y|1|Same as above ||
+|ContentHTML|string|Y|Content|Y|1|content_html and content_text are each optional strings — but one or both must be present.| |
+|ContentText|string|Y|Content|Y|1|Same as above ||
 |Summary|string|Y|Decription|Y|N|summary (optional, string) is a plain text sentence or two describing the item.||
 |Image|string|Y|-|Y|N|URL of the main image for the item. This image may also appear in the content_html||
 |BannerImage|string |Y|-|Y|N| banner_image (optional, string) is the URL of an image to use as a banner.||
@@ -26,6 +26,8 @@ O: Obligatoire
 En fonction des résultats...
 
 En priorité pour:
-- Le texte : Summary>Content HTML>Content Text
+- Le texte :
+  - (Json) Summary>Content HTML>Content Text
+  - (Fedd) Summary>Content
 - Image	   : Image>Banner Image
 
