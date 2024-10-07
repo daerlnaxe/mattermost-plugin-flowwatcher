@@ -10,10 +10,11 @@
 
 O: Obligatoire
 
+|ContentText|String|Y|Y| Same as above ||
 
  
  
- ContentText   string  `json:"content_text,omitempty"`   // Same as above
+ 
 	Summary       string  `json:"summary,omitempty"`        // summary (optional, string) is a plain text sentence or two describing the item.
 	Image         string  `json:"image,omitempty"`          // image (optional, string) is the URL of the main image for the item. This image may also appear in the content_html
 	BannerImage   string  `json:"banner_image,omitempty"`   // banner_image (optional, string) is the URL of an image to use as a banner.
