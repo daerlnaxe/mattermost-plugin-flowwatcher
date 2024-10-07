@@ -9,7 +9,7 @@
 |ContentHTML|string|Y|Content|Y|1|content_html and content_text are each optional strings — but one or both must be present.| |
 |ContentText|string|Y|Content|Y|1|Same as above ||
 |Summary|string|Y|Decription|Y|N|summary (optional, string) is a plain text sentence or two describing the item.||
-|Image|string|Y|-|Y|N|URL of the main image for the item. This image may also appear in the content_html||
+|Image|*string|Y|-|Y|N|URL of the main image for the item. This image may also appear in the content_html||
 |BannerImage|string |Y|-|Y|N| banner_image (optional, string) is the URL of an image to use as a banner.||
 |DatePublished|string|Y|-|Y|N|specifies the date in RFC 3339 format. (Example: 2010-02-07T14:04:00-05:00.)|
 |DateModified|string|Y|-|Y|N|specifies the modification date in RFC 3339 format.|Pas d'intérêt pour nous|
