@@ -6,11 +6,12 @@
 |URL|String|Y|Y|N|URL of the resource described by the item. It’s the permalink|
 |ExternalURL|String|Y|Y|N|external_url (very optional, string) is the URL of a page elsewhere. This is especially useful for linkblogs|Probablement Inutile pour flowwatcher|
 |Title|String|Y|Y|N|Titre|Peut être non présent avec les micro blogs|
-|ContentHTML|String|Y|Y| content_html and content_text are each optional strings — but one or both must be present.| |
+|ContentHTML|String|Y|Y|1|content_html and content_text are each optional strings — but one or both must be present.| |
+|ContentText|String|Y|Y|1|Same as above ||
 
 O: Obligatoire
 
-|ContentText|String|Y|Y| Same as above ||
+
 
  
  
