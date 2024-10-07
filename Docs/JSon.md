@@ -2,7 +2,7 @@
 
 |Variable|Type|JGofeed|UGoFeed|Balise|O|Description|Note|
 |-|-|-|-|-|-|-|-|
-|ID|string|Y|-|Y|Y|Ideally, the id is the full URL of the resource described by the item, since URLs make great unique identifiers.|A Check|
+|ID|string|Y|----|Y|Y|Ideally, the id is the full URL of the resource described by the item, since URLs make great unique identifiers.|A Check|
 |URL|string|Y|-|Y|N|URL of the resource described by the item. It’s the permalink|
 |ExternalURL|string|Y|-|Y|N|external_url (very optional, string) is the URL of a page elsewhere. This is especially useful for linkblogs|Probablement Inutile pour flowwatcher|
 |Title|string|Y|-|Y|N|Titre|Peut être non présent avec les micro blogs|
