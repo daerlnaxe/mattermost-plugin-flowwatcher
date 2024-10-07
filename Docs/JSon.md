@@ -20,6 +20,10 @@
 
 O: Obligatoire
 
+<br>
+<br>
+
+En fonction des résultats...
 
 En priorité pour:
 - Le texte : Summary>Content HTML>Content Text
