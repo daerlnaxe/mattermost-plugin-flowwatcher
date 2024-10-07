@@ -6,6 +6,9 @@ In theory it will support JSON also... in all cases, at the end it will support.
 <br>
 
 ## Version
+Alpha 04
+- Work but needs some features
+
 Alpha 01
 - Not really operationnal, for the while it's only binded to a RSS Source.
 - Both core subscribtion and posting are working.
@@ -14,6 +17,9 @@ Alpha 01
 <br>
 
 ## Todo
+- [ ] Split for json format and work with normalization, perhaps stop to use gofeed fot this, it depends of the result for images.
+- [ ] Add a managing based on image like if no image try banner
+- [ ] Add a managing based on content like if no summary try description
 - [ ] Donner un nom aux flux
 - [ ] Voir si on peut créer des formulaires, je pense que ça sera plus simple.
 - [ ] A Cleaner based on a word
