@@ -1,7 +1,9 @@
 # Presentation
 FlowWatcher use `gofeed` package and allow to post on a `Mattermost` channela feed from RSS (wip)
 
-In theory it will support JSON also... in all cases, at the end it will support. I'm not sure for the while but i will see to handle another types of flux, like APIs.
+Don't use it in production for the while, this is an Alpha version. I must change some things. There is an important function that allow to administrator to delete ALL messages for the bot, but also ALL messages for a specified user. You can protech messages you don't want to delete by using the emoji `white_check_mark`.
+
+Support JSON also... in all cases, at the end it will support. I'm not sure for the while but i will see to handle another types of flux, like APIs.
 
 <br>
 
