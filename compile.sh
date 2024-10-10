@@ -2,7 +2,13 @@
 
 set -e
 
+if [ -z "$1" ];then
 read -e -p "Give the name of the plugin: " plugin
+else
+plugin=$1
+fi
+
+
 # get absolute path
 pluginpath=$(realpath $plugin)
 pluginName=$(basename $plugin)
@@ -53,20 +59,20 @@ cd $pluginpath/Source/server
 echo "Compiling $gofiles ... "
 
 gofiles=$(ls *.go)
-
+echo "Files found: $gofiles"
 
 mkdir -p ../../dist
-go build -o ../../dist/plugin.exe $gofiles
+go build -o ../../dist/flw-linux-amd64 $gofiles
 cp ../plugin.json ../../dist/
 
 echo "Compiling done."
 
+
 echo "Compression of the plugin"
-
-
-
 cd ../../dist
-tar -czvf "mattermost-plugin-$pluginName".tar.gz plugin.exe plugin.json 
+tar -czvf "mattermost-plugin-$pluginName".tar.gz flw-linux-amd64 plugin.exe plugin.json 
+echo "Compression done."
+
 
 echo "Move plugin"
 mv "mattermost-plugin-$pluginName.tar.gz" /mnt/hgfs/Write/Dev/
