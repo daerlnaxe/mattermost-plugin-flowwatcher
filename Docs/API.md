@@ -9,9 +9,8 @@
 |Default|string|(Optional) Set a default value for this form element. |
 |Placeholder|string|(Optional) A string displayed to include a label besides the element. (max 150)|
 |HelpText|string|(Optional) Set help text for this form element.(max 150)|
+|Optional|Boolean|(Optional) Set to true if this form element is not required. Default is false.|
 
-
-Optional    				// Boolean				(Optional) Set to true if this form element is not required. Default is false.		
 MinLength   				// int      			(Optional) Minimum input length allowed for an element. Default is 0.
 MaxLength					// int					(Optional) Maximum input length allowed for an element. Default is 3000.
 DataSource  				// string 				(Optional) One of users, or channels. If none specified, assumes a manual list of options is provided by the integration.
