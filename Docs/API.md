@@ -3,10 +3,9 @@
 |Field|Type|Description|
 |-|-|-|
 |DisplayName|string|Display name of the field shown to the user in the dialog. Maximum 24 characters.|
+|Name|string|Name of the field element used by the integration. Maximum 300 characters. You should use UNIQUE name fields in the same dialog|
+|Type|string|text, texareat, select, bool, radio|
 
-
-Name: "urlLink",  				// string				Name of the field element used by the integration. Maximum 300 characters. You should use UNIQUE name fields in the same dialog
-Type : "text", 				// string				text, texareat, select, bool, radio
 SubType:     				// string				text & textarea:	text, email, number, password (as of v5.14), tel, or url.
 Default     				// string				(Optional) Set a default value for this form element. 
 Placeholder        // string				(Optional) A string displayed to include a label besides the element. (max 150)
