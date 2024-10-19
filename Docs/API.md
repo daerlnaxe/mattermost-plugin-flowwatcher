@@ -1,6 +1,10 @@
 ### model.DialogElement
 
-DisplayName: "URL", // string				Display name of the field shown to the user in the dialog. Maximum 24 characters.
+|Field|Type|Description|
+|-|-|-|
+|DisplayName|string|Display name of the field shown to the user in the dialog. Maximum 24 characters.|
+
+
 Name: "urlLink",  				// string				Name of the field element used by the integration. Maximum 300 characters. You should use UNIQUE name fields in the same dialog
 Type : "text", 				// string				text, texareat, select, bool, radio
 SubType:     				// string				text & textarea:	text, email, number, password (as of v5.14), tel, or url.
