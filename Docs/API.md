@@ -29,10 +29,12 @@ Options     				//[]*PostActionOptions	(Optional) An array of options for the se
     "channel_id": "ej11b7f5qbrodyk7u3x8yhqzko",
     "state": "",
     "submission": {
+//--- custom
         "login": "r",
         "pass": "raz",
         "setactive": "act",
         "urlLink": "https://www.jeuxvideo.com/rss/rss.xml"
+//--- custom
     },
     "team_id": "jr74qu6sbidgmkyitqsiwcohph",
     "type": "dialog_submission",
