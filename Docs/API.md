@@ -68,3 +68,10 @@ p.API.LogDebug(fmt.Sprintf("test setactive: %s", formCont["setactive"]))
 p.API.LogDebug(fmt.Sprintf("test login: %s", formCont["login"]))
 p.API.LogDebug(fmt.Sprintf("test pass: %s", formCont["pass"]))
 ```
+
+<br>
+<br>
+
+### Tips
+#### Json
+Si la structure a unchamp qui ne comporte pas une majuscule, ça ne fonctionne pas. Il faut mettre à droite du type `json: <nom json>`
