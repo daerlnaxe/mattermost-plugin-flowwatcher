@@ -41,3 +41,30 @@ Options     				//[]*PostActionOptions	(Optional) An array of options for the se
     "user_id": "ujtnkspj788bdqi45ehfpufhfo"
 }
 ```
+
+<br>
+<br>
+
+### Traitement
+#### Interface générique
+```golang
+// Conversion du body qui a été convertis du json
+m := rst.(map[string]interface{})
+
+// Affichage du champ user_id
+p.API.LogDebug(fmt.Sprintf("test: %s",m["user_id"]))	
+
+
+// Récupération de la partie submission qui est une struct
+form := m["submission"]
+// Affichage
+p.API.LogDebug(fmt.Sprintf("test form: %s", form))
+// Conversion de la partie submission vers un map string/interface	
+formCont:=form.(map[string]interface{})
+
+
+p.API.LogDebug(fmt.Sprintf("test urlLink: %s", formCont["urlLink"]))
+p.API.LogDebug(fmt.Sprintf("test setactive: %s", formCont["setactive"]))
+p.API.LogDebug(fmt.Sprintf("test login: %s", formCont["login"]))
+p.API.LogDebug(fmt.Sprintf("test pass: %s", formCont["pass"]))
+```
