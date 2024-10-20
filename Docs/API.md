@@ -1,3 +1,4 @@
+## Dialog Message
 ### model.DialogElement
 
 |Field|Type|Description|
@@ -15,3 +16,26 @@ MinLength   				// int      			(Optional) Minimum input length allowed for an el
 MaxLength					// int					(Optional) Maximum input length allowed for an element. Default is 3000.
 DataSource  				// string 				(Optional) One of users, or channels. If none specified, assumes a manual list of options is provided by the integration.
 Options     				//[]*PostActionOptions	(Optional) An array of options for the select element. Not applicable for users or channels data sources.
+
+<br>
+<br>
+
+
+### Résultat du Submit
+```json
+{
+    "callback_id": "",
+    "cancelled": false,
+    "channel_id": "ej11b7f5qbrodyk7u3x8yhqzko",
+    "state": "",
+    "submission": {
+        "login": "r",
+        "pass": "raz",
+        "setactive": "act",
+        "urlLink": "https://www.jeuxvideo.com/rss/rss.xml"
+    },
+    "team_id": "jr74qu6sbidgmkyitqsiwcohph",
+    "type": "dialog_submission",
+    "user_id": "ujtnkspj788bdqi45ehfpufhfo"
+}
+```
